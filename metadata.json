@@ -1,0 +1,28 @@
+{
+  "author": "James Glenn",
+  "dependencies": [],
+  "summary": "This module provides a class to deploy and configure PBIS Open. Supports Debian, RedHat, and Suse.",
+  "license": "GPL-3.0",
+  "name": "puppet-pbis",
+  "project_page": "https://github.com/thedonkdonk/puppet-pbis",
+  "requirements": [],
+  "source": "git://github.com/thedonkdonk/puppet-pbis.git",
+  "summary": "Joins a node to an Active Directory domain using PowerBroker Identity Services Open Edition.",
+  "tags": [],
+  "version": "0.3.1",
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "RedHat",
+      "operatingsystemrelease": ["5.0","6.0","7.0"]
+    },
+    { 
+      "operatingsystem": "CentOS",
+      "operatingsystemrelease": ["5.0","6.0","7.0"]
+    },
+    { 
+      "operatingsystem": "Debian",
+      "operatingsystemrelease": ["6.0","7.0"]
+    }
+  ]
+}
+  

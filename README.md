@@ -2,6 +2,10 @@
 
 Joins a node to an Active Directory domain using PowerBroker Identity Services Open Edition (PBIS).
 
+This is an active fork of https://github.com/ctf/puppet-pbis which is pretty good but needs some love.
+Last update was over a year ago so I am trying to take over. I personally use this.
+
+
 ## Usage
 
     node 'workstation' {
