@@ -30,14 +30,17 @@ class pbis::params {
   # PBIS Open is packaged for Red Hat, Suse, and Debian derivatives.
   # When using Puppet's built-in fileserver, choose the .deb or .rpm 
   # automatically.
-  $package_file = $::osfamily ? {
-    'Debian'          => "${package}.${::architecture}.deb",
-    /(RedHat|Suse)/ => "${package}.${::architecture}.rpm",
-    default           => fail("Unsupported operating system: ${::operatingsystem}."),
-  }
-  $package_file_provider = $::osfamily ? {
-    'Debian'          => 'dpkg',
-    /(RedHat|Suse)/ => 'rpm',
-    default           => fail("Unsupported operating system: ${::operatingsystem}."),
+  case $::osfamily {
+    'Debian': {
+      $package_file = "${package}.${::architecture}.deb"
+      $package_file_provider = 'dpkg'
+    }
+    'RedHat': { 
+      $package_file = "${package}.${::architecture}.rpm"
+      $package_file_provider = 'rpm'
+    }
+    default: {
+      fail("Unsupported operating system: ${::operatingsystem}.")
+    }
   }
 }
