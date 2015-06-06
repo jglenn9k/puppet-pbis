@@ -35,9 +35,13 @@ class pbis::params {
       $package_file = "${package}.${::architecture}.deb"
       $package_file_provider = 'dpkg'
     }
-    'RedHat': { 
+    'RedHat', 'Suse': { 
       $package_file = "${package}.${::architecture}.rpm"
       $package_file_provider = 'rpm'
+    }
+    'Darwin': {
+      $package_file = "${package}.dmg"
+      $package_file_provider = 'pkgdmg'
     }
     default: {
       fail("Unsupported operating system: ${::operatingsystem}.")
