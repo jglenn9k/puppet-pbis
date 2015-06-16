@@ -104,7 +104,6 @@ class pbis (
   file { $pbis_conf:
     ensure  => file,
     owner   => root,
-    group   => root,
     mode    => '0644',
     content => template('pbis/pbis.conf.erb'),
     require => Exec['join_domain'],
