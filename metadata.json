@@ -9,7 +9,7 @@
   "source": "git://github.com/thedonkdonk/puppet-pbis.git",
   "summary": "Joins a node to an Active Directory domain using PowerBroker Identity Services Open Edition.",
   "tags": [],
-  "version": "0.3.1",
+  "version": "0.3.2",
   "operatingsystem_support": [
     {
       "operatingsystem": "RedHat",
