@@ -13,7 +13,7 @@ class pbis::params {
   # PBIS configuration
   $assume_default_domain = true
   $create_home_dir       = true
-  $domain_separator      = '\\'
+  $domain_separator      = '\\\\'
   $space_replacement     = '_'
   $home_dir_prefix       = '/home'
   $home_dir_umask        = '022'
